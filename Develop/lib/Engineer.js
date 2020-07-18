@@ -3,10 +3,11 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 const Employee = require("./Employee");
 
-const Engineer = new Employee;
+const Engineer = new Employee("testEngineer",12345,"testEngineer@email.com");
+console.log(Engineer);
 
-* github  // GitHub username
+// * github  // GitHub username
 
-* getGithub()
+// * getGithub()
 
-* getRole() // Overridden to return 'Engineer'
+// * getRole() // Overridden to return 'Engineer'
