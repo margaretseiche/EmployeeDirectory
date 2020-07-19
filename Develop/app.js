@@ -51,12 +51,12 @@ function startQuestions(){
             ]
         }
     ]).then(function(response) {
-        roleQuestion(response);
-    }) 
-}        
+//         roleQuestion(response);
+//     }) 
+// }        
 
-function roleQuestion(employeeObject){
-    switch (employeeObject.role) {
+// function roleQuestion(response){
+    switch (response.role) {
         case 'Manager':     
             inquirer.prompt ([    
                 {
@@ -109,13 +109,21 @@ function roleQuestion(employeeObject){
             renderTeam(teamMembers);
             break;    
     }
+});
 }
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
 async function renderTeam(teamMembers){
-
+    try {
+        const teamHTML = await render(teamMembers);
+        fs.writeFileSync("./output/team.html", teamHTML, function () {
+            console.log("Success ! Created finalTeamPage.html");
+        })    
+    } catch (err) {
+        console.log(err);
+    }
 }
 
 startQuestions();

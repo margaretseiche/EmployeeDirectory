@@ -3,18 +3,18 @@ const fs = require("fs");
 
 const templatesDir = path.resolve(__dirname, "../templates");
 
-const render = employees => {
+const render = teamMembers => {
   const html = [];
 
-  html.push(employees
+  html.push(teamMembers
     .filter(employee => employee.getRole() === "Manager")
     .map(manager => renderManager(manager))
   );
-  html.push(employees
+  html.push(teamMembers
     .filter(employee => employee.getRole() === "Engineer")
     .map(engineer => renderEngineer(engineer))
   );
-  html.push(employees
+  html.push(teamMembers
     .filter(employee => employee.getRole() === "Intern")
     .map(intern => renderIntern(intern))
   );
@@ -25,7 +25,8 @@ const render = employees => {
 
 const renderManager = manager => {
   let template = fs.readFileSync(path.resolve(templatesDir, "manager.html"), "utf8");
-  template = replacePlaceholders(template, "name", manager.getName());
+  template = replacePlaceholders(template, "firstname", manager.getFirstName());
+  template = replacePlaceholders(template, "lastname", manager.getLastName());
   template = replacePlaceholders(template, "role", manager.getRole());
   template = replacePlaceholders(template, "email", manager.getEmail());
   template = replacePlaceholders(template, "id", manager.getId());
@@ -35,7 +36,8 @@ const renderManager = manager => {
 
 const renderEngineer = engineer => {
   let template = fs.readFileSync(path.resolve(templatesDir, "engineer.html"), "utf8");
-  template = replacePlaceholders(template, "name", engineer.getName());
+  template = replacePlaceholders(template, "firstname", engineer.getFirstName());
+  template = replacePlaceholders(template, "lastname", engineer.getLastName());
   template = replacePlaceholders(template, "role", engineer.getRole());
   template = replacePlaceholders(template, "email", engineer.getEmail());
   template = replacePlaceholders(template, "id", engineer.getId());
@@ -45,7 +47,8 @@ const renderEngineer = engineer => {
 
 const renderIntern = intern => {
   let template = fs.readFileSync(path.resolve(templatesDir, "intern.html"), "utf8");
-  template = replacePlaceholders(template, "name", intern.getName());
+  template = replacePlaceholders(template, "firstname", intern.getFirstName());
+  template = replacePlaceholders(template, "lastname", intern.getLastName());
   template = replacePlaceholders(template, "role", intern.getRole());
   template = replacePlaceholders(template, "email", intern.getEmail());
   template = replacePlaceholders(template, "id", intern.getId());
