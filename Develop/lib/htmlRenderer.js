@@ -3,18 +3,18 @@ const fs = require("fs");
 
 const templatesDir = path.resolve(__dirname, "../templates");
 
-const render = teamMembers => {
+const render = employees => {
   const html = [];
 
-  html.push(teamMembers
+  html.push(employees
     .filter(employee => employee.getRole() === "Manager")
     .map(manager => renderManager(manager))
   );
-  html.push(teamMembers
+  html.push(employees
     .filter(employee => employee.getRole() === "Engineer")
     .map(engineer => renderEngineer(engineer))
   );
-  html.push(teamMembers
+  html.push(employees
     .filter(employee => employee.getRole() === "Intern")
     .map(intern => renderIntern(intern))
   );

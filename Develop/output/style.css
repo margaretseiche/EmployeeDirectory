@@ -1,0 +1,39 @@
+body {
+    background-color: #e0e0eb; 
+}
+
+.header {
+    background-color: #52527a;
+    color:white;
+}
+
+.jumbotron {
+    background-color: #52527a;
+    color:white;
+    height: 9em;
+}
+
+.employee-card {
+    width: 20em;
+    margin: 1em;
+    border: 2px solid #a3a3c2;
+}
+
+/* .list-group {
+    margin: 0;
+} */
+
+.manager-header {
+    background-color: #b30000;
+    color:white;
+}
+
+.engineer-header {
+    background-color: #0000ff;
+    color:white;
+}
+
+.intern-header {
+    background-color: #008000;
+    color:white;
+}
