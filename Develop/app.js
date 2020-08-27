@@ -15,11 +15,12 @@ let employees = [];
 
 //PER TUTOR'S ADVICE, FIRST RESPONDENT SHOULD BE THE MANAGER.  THEN MANAGER SHOULD CONTINUE BUILDING TEAM
 function startQuestions() {
+    console.log("Please start the process by completing details on the manager.")
     inquirer.prompt ([
         {
             type: "input",
             name: "firstname",
-            message: "What is this employee's first name?"
+            message: "What is this manager's first name?"
         },
         {
             type: "input",
@@ -110,7 +111,7 @@ function addEngineer() {
                                       response3.lastname,
                                       response3.id,
                                       response3.email,
-                                      response3.office);
+                                      response3.github);
         employees.push(engineer);    
         
         console.log("___________________________________________");
@@ -214,26 +215,6 @@ function buildTeam() {
     }
     fs.writeFileSync(outputPath,render(employees),"utf-8")
 }
-
-
-
-
-
-
-
-// async function renderTeam(employees){
-//     try {
-//         const teamHTML = await render(employees);
-//         fs.writeFileSync("./output/team.html", teamHTML, function () {
-//             console.log("Success ! Created finalTeamPage.html");
-//         })    
-//     } catch (err) {
-//         console.log(err);
-//     }
-// }
-
-
-
 
 startQuestions();
 

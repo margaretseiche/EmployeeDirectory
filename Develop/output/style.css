@@ -2,9 +2,15 @@ body {
     background-color: #e0e0eb; 
 }
 
+#container-wrapper {
+    align-content: center;
+    min-width:100%;
+}
+
 .header {
     background-color: #52527a;
     color:white;
+    margin-bottom: 1em;
 }
 
 .jumbotron {
@@ -13,15 +19,19 @@ body {
     height: 9em;
 }
 
-.employee-card {
-    width: 20em;
-    margin: 1em;
-    border: 2px solid #a3a3c2;
+.container {
+    align-content: center;
+    width: 100%;
+    margin: 20px;
+    padding: 1em;
 }
 
-/* .list-group {
-    margin: 0;
-} */
+.employee-card {
+    margin: 1em;
+    border: 2px solid #a3a3c2;
+    margin: 10px;
+}
+
 
 .manager-header {
     background-color: #b30000;
@@ -36,4 +46,11 @@ body {
 .intern-header {
     background-color: #008000;
     color:white;
+}
+
+@media all and (max-width: 560px) {
+    .container {
+        text-align: center;
+        width: 100%!important;
+    }
 }
