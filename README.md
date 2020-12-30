@@ -1,4 +1,4 @@
-# 07162020-EmployeeDirectory
+# Employee Directory
 
 Demo link at https://youtu.be/yS8ZmDgy3n8
 
