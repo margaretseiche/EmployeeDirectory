@@ -4,6 +4,8 @@ Demo link at https://youtu.be/yS8ZmDgy3n8
 
 ![tes](/Develop/output/EmployeeDirectory.JPG)
 
+## Description
+
 * Since we have been talking about 'test driven development', I thought that starting with the tests would be appropriate.
 
 - In Employee.test.js, the first test was confirming that Employee is set as an object.
@@ -23,3 +25,13 @@ Demo link at https://youtu.be/yS8ZmDgy3n8
 
 * The tests all pass.  (I had to rework the tests, because I split name into firstname and lastname, so had errors on Employee.test.js until I added the correct components for each test.  So actually, going through that, I understand tests a little more.)
 
+## Usage
+npm run test
+node app.js
+
+## Authors
+* Margaret Seiche, Github: margaretseiche
+<img alt="Margaret Seiche" src="https://avatars.githubusercontent.com/margaretseiche?s=200" width="200" height="200">
+
+## Contact
+seichemargaret@gmail.com
