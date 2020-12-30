@@ -26,8 +26,10 @@ Demo link at https://youtu.be/yS8ZmDgy3n8
 * The tests all pass.  (I had to rework the tests, because I split name into firstname and lastname, so had errors on Employee.test.js until I added the correct components for each test.  So actually, going through that, I understand tests a little more.)
 
 ## Usage
-npm run test
-node app.js
+
+* npm run test
+
+* node app.js --- Follow the prompts.  Then open /output/team.html in the browser.
 
 ## Authors
 * Margaret Seiche, Github: margaretseiche
