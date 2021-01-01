@@ -8,6 +8,9 @@ Demo link at https://youtu.be/yS8ZmDgy3n8
 Node Command Line Interface, Node Inquirer, Jest (testing)
 
 ## Description
+Teams need keep track of team member details in a simple format.  This app allows managers to build a team contact list with each person's name, position, ID number, email address, and role-specific information (office number for managers, Github name for engineers, and school for interns).  
+
+## Methodology
 
 * Since we have been talking about 'test driven development', I thought that starting with the tests would be appropriate.
 
